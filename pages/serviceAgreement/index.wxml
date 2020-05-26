@@ -1,0 +1,12 @@
+<!--pages/serviceAgreement/index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view>
+  <!-- <view class='imgBox'>
+      <image src='../../images/fwxy.jpg'></image>
+  </view> -->
+  <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">服务协议</view>
+  </cu-custom>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

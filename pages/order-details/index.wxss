@@ -1,0 +1,13 @@
+
+page {
+}
+.btn{
+	margin-top: 30px;
+	padding: 10px;
+}
+.smBind{
+	width: 100%;
+}
+.equips .item{
+	padding: 5px 0;
+}

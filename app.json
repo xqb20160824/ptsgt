@@ -1,0 +1,49 @@
+{
+		
+	"pages": [
+		"pages/order/index",
+		"pages/entry/index",
+		"pages/smlr/index",
+		
+		"pages/loginName/index",
+		"pages/home/index",
+		"pages/my/index",
+		"pages/index/index",
+		"pages/logs/index",
+		"pages/aboutUs/index",
+		"pages/login/index",
+		"pages/serviceAgreement/index",
+		"pages/contact/index"
+	],
+	"window": {
+		"navigationBarBackgroundColor": "#39b54a",
+		"navigationBarTitleText": "向导犬",
+		"navigationBarTextStyle": "black",
+		"navigationStyle": "custom",
+		"backgroundColor":"#ffffff"
+	},
+	"usingComponents": {
+		"cu-custom": "/colorui/components/cu-custom"
+	},
+	"tabBar": {
+		"color": "#6e6d6b",
+		"selectedColor": "#1cbbb4",
+		"list": [{
+			"pagePath": "pages/entry/index",
+			"text": "订单录入",
+			"iconPath": "images/tabbar/home.png",
+			"selectedIconPath": "images/tabbar/home_cur.png"
+		}, {
+			"pagePath": "pages/order/index",
+			"text": "订单列表",
+			"iconPath": "images/tabbar/order.png",
+			"selectedIconPath": "images/tabbar/order_cur.png"
+		}, {
+			"pagePath": "pages/my/index",
+			"text": "我的",
+			"iconPath": "images/tabbar/about.png",
+			"selectedIconPath": "images/tabbar/about_cur.png"
+		}]
+	},
+	"sitemapLocation": "sitemap.json"
+}

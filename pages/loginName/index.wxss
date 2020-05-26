@@ -1,0 +1,44 @@
+/**index.wxss**/
+page{
+	background: #fff;
+}
+.header{
+	margin: 250rpx auto 39rpx;
+	text-align: center;
+}
+ .header image{
+	 width: 80px;
+	 height: 80px;
+	 overflow: hidden;
+	 border-radius: 50%;
+ }
+.main{
+	display: flex;
+	flex-direction: column;
+	padding-left: 38px;
+	padding-right: 38px;
+}
+.main-list{
+	box-shadow: 0 0 32px 0 rgba(43,86,112,.1);
+	display: flex;
+	height: 50px;
+	margin: 13px 0;
+	border-radius: 25px;
+}
+.main-list input{
+	height: 50px;
+	width: 100%;
+	padding:0 20px;
+	font-size: 30rpx;
+}
+.login-btn{
+	text-align: center;
+	margin-top: 40px;
+}
+.login-btn .text{
+	height: 50px;
+	line-height: 50px;
+	border-radius: 25px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+	color: rgb(255, 255, 255);
+}

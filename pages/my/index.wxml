@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<!-- <cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">个人主页</view>
+</cu-custom> -->
+<view>
+  <view class="userbox bg-gradual-blue">
+    <view wx:if="{{isLogin}}" class="userinfo">
+      <image src="../../images/logo.png" mode="scaleToFill" class="userinfo-avatar"></image>
+	  <view class='userinfo-text'>
+        <text class="userinfo-nickname">柜台管理员</text>
+      </view>
+    </view>
+    <view wx:else class="userinfo">
+      <!-- <wxc-avatar class="userinfo-avatar" mold="square" src="../../images/default.jpg" bindtap="relogin"> </wxc-avatar> -->
+	  <image src="../../images/logo.png" mode="scaleToFill" class="userinfo-avatar"></image>
+      <view class='userinfo-text'>
+        <!-- <text class="userinfo-nickname"> 欢迎您 </text> -->
+		<button class="cu-btn round bg-pink pleaseLogin" bindtap="aa">请登录</button>
+      </view>
+    </view>
+  </view>
+  <view class='boxList'>
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+        <view class="cu-item arrow">
+          <navigator class="content" url="/pages/aboutUs/index">
+            <text class="cuIcon-github text-grey"></text>
+            <text class="text-grey">关于我们</text>
+          </navigator>
+        </view>
+        <view class="cu-item arrow">
+          <navigator class="content" url="/pages/contact/index" hover-class="none">
+            <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+            <text class="text-grey">联系我们</text>
+          </navigator>
+        </view>
+		<view class="cu-item arrow">
+		  <button open-type='contact' class="content lx" hover-class="none">
+		    <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+		    <text class="text-grey">联系客服</text>
+			<!-- <button  class="buttomLxkf text-grey">联系客服</button> -->
+		  </button>
+		</view>
+	</view>
+  </view>
+</view>

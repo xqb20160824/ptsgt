@@ -1,0 +1,11 @@
+<import src="../../wxParse/wxParse.wxml" />
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">联系我们</view>
+</cu-custom>
+<view>
+  <!-- <view class='imgBox'>
+      <image src='../../images/fwxy.jpg'></image>
+  </view> -->
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

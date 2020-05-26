@@ -1,0 +1,80 @@
+/**index.wxss**/
+.shebei .item{
+	position: relative;
+	display: flex;
+	margin: 5px;
+	align-items: center;
+}
+.shebei .item .num-box{
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-right: 20rpx;
+}
+.shebei .item .icon-box{
+	display: flex;
+	align-items: center;
+	width: 40rpx;
+	height: 40rpx;
+	border:1px solid #ccc;
+	border-radius: 50%;
+	border:1px solid #ccc;
+	border-radius: 50%;
+	background: #ccc;
+	color: #fff;
+	z-index: 999;
+}
+.shebei .item .close{
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	text-align: center;
+}
+.dataPicker{
+	display: flex;
+	align-items: center;
+}
+.cu-form-group picker{
+	padding: 0 10px;
+	width: 80px;
+	
+}
+.cu-form-group picker::after{
+	display: none;
+}
+.cu-form-group picker .picker{
+	text-align: center;
+}
+.group-center{
+	text-align: center;
+	justify-content:center;
+}
+.cu-form-group input{
+	text-align: right;
+}
+.view-box{
+	padding-bottom: 300rpx;
+}
+.sureBtn{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 40rpx;
+}
+.sureBtn .cu-btn{
+	padding: 0 60rpx;
+}
+.sureBtn .num{
+	font-size: 40rpx;
+	color: red;
+}
+.sbdj{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

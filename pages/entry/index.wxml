@@ -1,0 +1,25 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">向导犬</view>
+</cu-custom>
+<view class="box padding flex flex-direction" style="height:calc(100vh - {{CustomBar}}px)">
+	<button class="cu-btn margin-tb-sm lg bg-gradual-blue" bindtap="smBind">扫码录入</button>
+</view>
+<view class="cu-modal {{tipsModal?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      您还没有登录，现在去登录吗？
+    </view>
+	<view class="cu-bar bg-white justify-end">
+	  <view class="action">
+		<button class="cu-btn line-blue text-blue" bindtap="hideModal">取消</button>
+		<button class="cu-btn bg-gradual-blue margin-left" bindtap="toLogin">确定</button>
+	  </view>
+	</view>
+  </view>
+</view>

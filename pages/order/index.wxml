@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">当日订单列表</view>
+</cu-custom>
+
+
+<listView class='box flex flex-direction listView_box' style="height:calc(100vh - {{CustomBar}}px)" length='{{listData.length}}' emptyText='没有数据咯~' noMore='{{false}}' bind:onRefresh='onRefresh' bind:onLoadMore='onLoadMore'>
+	<view class="table">
+		<view class="table-tr">
+			<view class="table-th">
+				姓名
+			</view>
+			<view class="table-th">手机</view>
+			<view class="table-th" data-index="totalDeviceNum" bindtap="handlePx">
+				台
+				<image class="px" mode="widthFix" src="{{orderColumn=='totalDeviceNum'?(orderType=='desc'?imageurl0:imageurl1):imageurl2}}"></image>
+			</view>
+			<view class="table-th" data-index="days" bindtap="handlePx">
+				天
+				<image class="px" mode="widthFix" src="{{orderColumn=='days'?(orderType=='desc'?imageurl0:imageurl1):imageurl2}}"></image>
+			</view>
+			<view class="table-th time-th" data-index="createDateTime" bindtap="handlePx">
+				订单创建时间
+				<image class="px" mode="widthFix" src="{{orderColumn=='createDateTime'?(orderType=='desc'?imageurl0:imageurl1):imageurl2}}"></image>
+			</view>
+		</view>
+		<view class="table-tr" wx:for="{{orderList}}" wx:key="index" bindtap="handleSeeDetails" data-item="{{item}}">
+			<view class="table-td">{{item.realName}}</view>
+			<view class="table-td">{{item.mobilePhone}}</view>
+			<view class="table-td" >{{item.totalDeviceNum}}</view>
+			<view class="table-td" >{{item.days}}</view>
+			<view class="table-td" >{{item.createDateTime}}</view>
+		</view>
+	</view>
+</listView>
+<!-- <view class="box padding flex flex-direction" style="height:calc(100vh - {{CustomBar}}px)">
+	<button class="cu-btn margin-tb-sm lg bg-gradual-blue" bindtap="smBind">扫码录入</button>
+</view> -->

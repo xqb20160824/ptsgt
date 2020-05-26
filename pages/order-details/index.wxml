@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+  <view slot="content">订单详情</view>
+</cu-custom>
+<view class="cu-form-group">
+	<view class="title">姓名</view>
+	<view >
+		{{item.realName}}
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">身份号码</view>
+	<view>
+		{{item.idCard}}
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">手机号</view>
+	<view>
+		{{item.mobilePhone}}
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">设备号</view>
+	<view class="equips">
+		<view class="item" wx:for="{{item.orderDeviceList}}" wx:for-item="item1" wx:key="index" >
+			{{item1.deviceMAC}}
+		</view>
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">设备单价</view>
+	<view>
+		{{item.price}}元
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">设备台数</view>
+	<view>
+		{{item.totalDeviceNum}}台
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">天数</view>
+	<view>
+		{{item.days}}天
+	</view>
+</view>
+<view class="cu-form-group">
+	<view class="title">总价</view>
+	<view>
+		{{item.totalPrice}}元
+	</view>
+</view>
+<view class="btn">
+	<button class="cu-btn bg-red margin-tb-sm lg smBind" bindtap="cancleOrder">取消订单</button>
+</view>

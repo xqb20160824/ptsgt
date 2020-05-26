@@ -1,0 +1,6 @@
+{
+	  "navigationBarTitleText": "当日订单列表",
+	  "usingComponents": {
+	  		"listView": "/component/listView/listView"
+	  	}
+}

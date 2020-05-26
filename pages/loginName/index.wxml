@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">登录</view>
+</cu-custom>
+<view class="header">
+	<image src="{{logoImage}}" mode="aspectFill"></image>
+</view>
+<view class="main">
+	<view class="main-list">
+		<input bindinput="handleUseName" placeholder="用户名/电话" />
+	</view>
+	<view class="main-list">
+		<input  bindinput="handlePswd"  placeholder="密码" password/>
+	</view>
+	<view class="login-btn">
+		<view class="text" bindtap="handleLogin">
+			登 陆
+		</view>
+	</view>
+</view>

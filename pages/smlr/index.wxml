@@ -1,0 +1,64 @@
+
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">扫码录入</view>
+</cu-custom>
+<view class="view-box">
+	<view class="cu-form-group group-center margin-top">
+		<button class="cu-btn line-blue " bindtap="scanDevice">设备扫描</button>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">设备号</view>
+		<view class="shebei">
+			<view class="item" wx:for="{{sbNumber}}" wx:key="index" >
+				<view class="num-box">
+					{{item.deviceMAC}}
+				</view>
+				<view class="icon-box" data-index="{{index}}" bindtap="handleClose">
+					<uni-text class="close lg text-gray cuIcon-close" ></uni-text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">设备单价</view>
+		<view class="sbdj">
+			<input placeholder="设备单价" type="digit" value="{{price}}" bindinput="handlePrice" ></input>元
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">设备台数</view>
+		<view>{{number}}台</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">天数</view>
+		<view class="sbdj">
+			<input class="uni-input" type="number" value="{{totalDays}}" bindinput="handleDays" placeholder="天数" />天
+		</view>
+	</view>
+	
+	<view class="cu-form-group">
+		<view class="title">手机号</view>
+		<view><input class="uni-input" type="number" value="{{mobilePhone}}" bindinput="handlePhone" placeholder="手机号" /></view>
+	</view>
+	<view class="cu-form-group group-center margin-top">
+		<button class="cu-btn line-blue " bindtap="scanID">身份证扫描</button>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">姓名</view>
+		<view>{{realName}}</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">身份号码</view>
+		<view>{{IDCard}}</view>
+	</view>
+</view>
+<view class="sureBtn">
+	<view class="num">
+		<view>￥{{totalPrice}}元</view>
+	</view>
+	<view class="btn">
+		<button class="cu-btn bg-red margin-tb-sm lg" bindtap="smBind">录入</button>
+	</view>
+</view>
+

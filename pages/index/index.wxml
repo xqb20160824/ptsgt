@@ -1,0 +1,23 @@
+<home wx:if="{{PageCur=='home'}}"></home>
+<order wx:if="{{PageCur=='order'}}"></order>
+<about wx:if="{{PageCur=='my'}}"></about>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='home'?'text-green':'text-gray'}}">首页</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="order">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/component{{PageCur=='order'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='order'?'text-green':'text-gray'}}">订单</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="my">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/plugin{{PageCur=='my'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">我的</view>
+  </view>
+</view>
